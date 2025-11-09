@@ -1,32 +1,33 @@
-
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CASIO"
-        android:textSize="30dp"
-        android:layout_alignParentRight="true"
-        />
+        android:text="Casio"
+        android:textSize="30sp"
+        android:layout_alignParentEnd="true" />
 
     <EditText
+        android:id="@+id/edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit1"
         android:hint="0"
         android:layout_below="@id/text"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="right"
-        />
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:textSize="20sp" />
 
+    <!-- Row 1: 1 2 3 -->
     <Button
         android:id="@+id/bt1"
         android:layout_width="60dp"
@@ -34,200 +35,171 @@
         android:layout_below="@id/edit1"
         android:layout_marginTop="10dp"
         android:layout_marginStart="15dp"
-        android:textSize="20dp"
-        android:text="1" />
+        android:text="1"
+        android:textSize="20sp" />
 
     <Button
-
+        android:id="@+id/bt2"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/edit1"
-        android:layout_alignRight="@+id/bt1"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="-80dp"
-        android:layout_alignTop="@id/bt1"
-        android:textSize="20dp"
+        android:layout_toEndOf="@id/bt1"
+        android:layout_alignBaseline="@id/bt1"
+        android:layout_marginStart="15dp"
         android:text="2"
-        android:id="@+id/bt2"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/bt3"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/edit1"
-        android:layout_alignTop="@id/bt1"
-        android:layout_alignRight="@+id/bt2"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="-80dp"
-        android:textSize="20dp"
-        android:text="3" />
-
-    <Button
+        android:layout_toEndOf="@id/bt2"
+        android:layout_alignBaseline="@id/bt2"
         android:layout_marginStart="15dp"
+        android:text="3"
+        android:textSize="20sp" />
+
+    <!-- Row 2: 4 5 6 -->
+    <Button
+        android:id="@+id/bt4"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_below="@id/bt1"
-        android:layout_marginTop="2dp"
-        android:textSize="20dp"
-
+        android:layout_alignStart="@id/bt1"
+        android:layout_marginTop="10dp"
         android:text="4"
-        android:id="@+id/bt4"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/bt5"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/bt2"
-        android:layout_alignTop="@id/bt1"
-        android:layout_alignRight="@+id/bt4"
-        android:layout_marginTop="64dp"
-        android:textSize="20dp"
-        android:layout_marginRight="-80dp"
-        android:text="5" />
+        android:layout_toEndOf="@id/bt4"
+        android:layout_alignBaseline="@id/bt4"
+        android:layout_marginStart="15dp"
+        android:text="5"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/bt6"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/bt3"
-        android:layout_alignTop="@id/bt1"
-        android:textSize="20dp"
-        android:layout_alignRight="@+id/bt5"
-
-        android:layout_marginTop="64dp"
-        android:layout_marginRight="-80dp"
-        android:text="6" />
-
-    <Button
+        android:layout_toEndOf="@id/bt5"
+        android:layout_alignBaseline="@id/bt5"
         android:layout_marginStart="15dp"
+        android:text="6"
+        android:textSize="20sp" />
+
+    <!-- Row 3: 7 8 9 -->
+    <Button
+        android:id="@+id/bt7"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_below="@id/bt4"
-        android:layout_marginTop="2dp"
-        android:textSize="20dp"
-        android:layout_marginRight="89dp"
+        android:layout_alignStart="@id/bt4"
+        android:layout_marginTop="10dp"
         android:text="7"
-        android:id="@+id/bt7"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/bt8"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/bt5"
-        android:layout_alignTop="@id/bt7"
-        android:layout_alignRight="@+id/bt7"
-        android:layout_marginTop="2dp"
-        android:textSize="20dp"
-        android:layout_marginRight="-80dp"
+        android:layout_toEndOf="@id/bt7"
+        android:layout_alignBaseline="@id/bt7"
+        android:layout_marginStart="15dp"
         android:text="8"
-        />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/bt9"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/bt6"
-        android:layout_alignTop="@id/bt7"
-        android:layout_alignRight="@+id/bt8"
-        android:layout_marginTop="2dp"
-        android:textSize="20dp"
-        android:layout_marginRight="-80dp"
-        android:text="9" />
-
-    <Button
+        android:layout_toEndOf="@id/bt8"
+        android:layout_alignBaseline="@id/bt8"
         android:layout_marginStart="15dp"
+        android:text="9"
+        android:textSize="20sp" />
+
+    <!-- Row 4: . 0 C -->
+    <Button
         android:id="@+id/dot"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_below="@id/bt7"
-        android:layout_alignTop="@id/bt7"
-        android:layout_alignRight="@+id/bt7"
-        android:layout_marginTop="64dp"
-        android:layout_marginRight="-80dp"
-
+        android:layout_alignStart="@id/bt7"
+        android:layout_marginTop="10dp"
         android:text="."
-        android:textSize="30dp"/>
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/zero"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/bt8"
-        android:layout_alignTop="@id/bt7"
-        android:layout_alignRight="@+id/bt7"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginRight="-80dp"
-        android:textSize="20dp"
-        android:text="0" />
+        android:layout_toEndOf="@id/dot"
+        android:layout_alignBaseline="@id/dot"
+        android:layout_marginStart="15dp"
+        android:text="0"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/clear"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@id/bt9"
-        android:layout_alignTop="@id/zero"
-        android:layout_alignRight="@+id/zero"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="-80dp"
+        android:layout_toEndOf="@id/zero"
+        android:layout_alignBaseline="@id/zero"
+        android:layout_marginStart="15dp"
+        android:text="C"
+        android:textSize="20sp" />
 
-        android:text="c"
-        android:textSize="20dp"/>
-
+    <!-- Right-side operations -->
     <Button
         android:id="@+id/add"
-        android:layout_width="110dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
-        android:layout_below="@id/edit1"
-        android:layout_alignTop="@id/zero"
-        android:layout_alignRight="@+id/zero"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="-186dp"
-        android:layout_marginRight="-207dp"
-        android:textSize="20dp"
-        android:text="+" />
+        android:layout_alignTop="@id/bt1"
+        android:layout_alignParentEnd="true"
+        android:text="+"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/sub"
-        android:layout_width="110dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_below="@id/add"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="253dp"
-
+        android:layout_alignEnd="@id/add"
+        android:layout_marginTop="10dp"
         android:text="-"
-        android:textSize="20dp"
-        />
-
-    <Button
-        android:id="@+id/div"
-        android:layout_width="110dp"
-        android:layout_height="60dp"
-        android:text="/"
-        android:layout_below="@id/sub"
-        android:layout_marginTop="2dp"
-        android:textSize="20dp"
-        android:layout_marginStart="253dp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/mul"
-
-        android:layout_width="110dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
-        android:text="X"
-        android:layout_below="@id/div"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="253dp"/>
+        android:layout_below="@id/sub"
+        android:layout_alignEnd="@id/sub"
+        android:layout_marginTop="10dp"
+        android:text="×"
+        android:textSize="20sp" />
 
     <Button
-        android:id="@+id/eql"
+        android:id="@+id/div"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/mul"
+        android:layout_alignEnd="@id/mul"
+        android:layout_marginTop="10dp"
+        android:text="÷"
+        android:textSize="20sp" />
 
-        android:layout_width="350dp"
+    <!-- Equals Button -->
+    <Button
+        android:id="@+id/eql"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_below="@id/clear"
-        android:layout_marginStart="15dp"
-        android:textSize="20dp"
+        android:layout_marginTop="10dp"
         android:text="="
-        android:layout_marginTop="4dp"/>
+        android:textSize="20sp" />
+
 </RelativeLayout>
+
