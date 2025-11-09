@@ -8,7 +8,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Declare UI components
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, dot, zero, clear, add, sub, div, mul, eql;
     EditText edit1;
 
@@ -40,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
         eql = findViewById(R.id.eql);
         edit1 = findViewById(R.id.edit1);
 
-        // Listener for number and dot buttons
+      
         View.OnClickListener numberClickListener = v -> {
             Button b = (Button) v;
             edit1.append(b.getText().toString());
         };
 
-        // Attach listeners to number buttons
+        
         bt1.setOnClickListener(numberClickListener);
         bt2.setOnClickListener(numberClickListener);
         bt3.setOnClickListener(numberClickListener);
