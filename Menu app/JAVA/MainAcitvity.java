@@ -64,30 +64,35 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(MainActivity.this, Settings.class);
+            Intent intent=new Intent(this, settings.class);
             startActivity(intent);
-            return true;
-        } else if (id == R.id.action_privacyandpolicy) {
-            Intent intent = new Intent(MainActivity.this, PrivacyandPolicy.class);
-            startActivity(intent);
-            return true;
 
-
-        } else if (id == R.id.action_help) {
-            Intent intent = new Intent(MainActivity.this, Help.class);
-            startActivity(intent);
-            return true;
-
-        }else if (id == R.id.action_contactus) {
-            Intent intent = new Intent(MainActivity.this, ContactUs.class);
-            startActivity(intent);
-            return true;
-        }else if (id == R.id.action_termsandconditions) {
-            Intent intent = new Intent(MainActivity.this, TermsandConditions.class);
-            startActivity(intent);
             return true;
         }
+        else if (id == R.id.action_privacyandpolicy) {
+            Intent intent=new Intent(this, privacypolicy.class);
+            startActivity(intent);
 
+            return true;
+        }
+        else if (id == R.id.action_help) {
+            Intent intent=new Intent(this, help.class);
+            startActivity(intent);
+
+            return true;
+        }
+        else if (id == R.id.action_contactus) {
+            Intent intent=new Intent(this, contactus.class);
+            startActivity(intent);
+
+            return true;
+        }
+        else if (id == R.id.action_termsandconditions) {
+            Intent intent=new Intent(this, Termsandconditions.class);
+            startActivity(intent);
+
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
